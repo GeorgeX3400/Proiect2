@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <title>Graph Editor</title>
+</head>
+<body>
+    <h3>Graph Editor</h3>
+    <section id="instructions">
+        <h4>Editor instructions:</h4>
+        <ul>
+            <li>
+                <p class="bold">Adding a node:</p>
+                <p>You must pick a name for your node (the name must have at most 3 characters)</p>
+                <p>After choosing the name, click the canvas on the place you want your node to be drawn.
+            </li>
+            <li>
+                <p class="bold">Deleting a node:</p>
+                <p>Write the name of the node you want to delete; The node will be deleted along with its edges.</p>
+            </li>
+            <li>
+                <p class="bold">Adding an edge:</p>
+                <p>Write the names of the 2 nodes you want the edge to be between (the nodes must both be in the graph).</p>
+
+            </li>
+            <li>
+                <p class="bold">Deleting an edge:</p>
+                <p>Write the names of the 2 nodes of the edge you want to delete.</p>
+            </li>
+            <li>
+                <p class="bold">Running BFS:</p>
+                <p>Unfortunately, due to the developer's laziness and stupidity, this functionality does not work. :(</p>
+            </li>
+        </ul>
+    </section>
+    <div id="canvas-interface">
+        <button class="add" id="addNode">Add Node</button>
+        <a></a>
+        <button class="delete" id="deleteNode">Delete Node</button>
+        <a></a>
+        <button class="add" id="addEdge">Add Edge</button>
+        <a></a>
+        <button class="delete" id="deleteEdge">Delete Edge</button>
+        <a></a>
+        <button id="runBFS">Run BFS</button>
+    </div>
+    <canvas id="graphCanvas" width="800px" height="500px">
+    </canvas>
+    <p id="graphLogs"></p>
+    <br>
+    <a>Node Color:</a>
+    <input type="color" id="nodeColor"> <br><br>
+    <a>Edge Color:</a>
+    <input type="color" id="edgeColor">
+    <br><br>
+    <a>Node Color (visited node when running BFS):</a>
+    <input type = "color" id="visColor">
+    <!--  sections which help in the functions of the editor: -->
+    <!--  for adding/deleting node: -->
+    <section id="popup">
+        <section id="popup-content">
+           <a class="blackText">Node:</a>
+        <input type="text" id="nodeVal">
+        <br>
+        <button id="ok1">OK</button> 
+        </section>   
+    </section>
+    <!--  for adding/deleting edge: -->
+
+    <section id="popup2">
+        <section id="popup-content2">
+        <a class="blackText">First node:</a>
+        <input type="text" id="node1">
+        <br>
+        <a class="blackText">Second node:</a>
+        <input type="text" id="node2">
+        <br>
+        <button id="ok2">OK</button> 
+        </section>
+        
+    </section>
+    <a href = 'logout'>Logout</a>
+    <script src="./graph.js"></script>
+</body>
+</html>
